@@ -15,9 +15,10 @@ basic.forever(function () {
         meteorito.change(LedSpriteProperty.Y, 1)
     }
     if (meteorito.isTouching(puntua)) {
-        basic.showString("GAME OVER")
+        game.gameOver()
     } else {
         meteorito.delete()
+        game.addScore(1)
     }
     basic.pause(200)
 })
